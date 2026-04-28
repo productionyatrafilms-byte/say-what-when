@@ -93,7 +93,7 @@
       englishBtn.addEventListener("click", () => changeLanguage("English"));
     }
 
-    if (hindiBtn) {
+    if git (hindiBtn) {
       hindiBtn.addEventListener("click", () => changeLanguage("Hindi"));
     }
 
