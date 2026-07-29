@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-lang-key="title">Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <style>
+      /* Initially only images should be visible, videos stay hidden */
+      .card-image video {
+        display: none;
+      }
+
+      /* When a slide is activated (clicked), swap image out for video */
+      .card.show-video .card-image img {
+        display: none;
+      }
+
+      .card.show-video .card-image video {
+        display: block;
+      }
+
+      /* Close button lives on the card/slide itself, not inside card-image */
+      .card {
+        position: relative;
+      }
+
+      .slide-close-btn {
+        display: none;
+        position: absolute;
+        top: 0.5vw;
+        right: 0.5vw;
+        z-index: 20;
+        width: 2.5vw;
+        height: 2.5vw;
+        border: none;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 1.5vw;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .card.show-video .slide-close-btn {
+        display: flex;
+      }
+
+      .slide-close-btn:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Pranam link - hidden by default, shown only on last slide focus */
+      .pranam-link {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 2vw;
+        bottom: 2vw;
+        width: 9vw;
+        height: auto;
+        text-decoration: none;
+        z-index: 9999;
+        cursor: pointer;
+        animation: pranamPop 1.2s ease-in-out infinite;
+        transform-origin: center;
+
+        /* hidden by default */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+
+      .pranam-link img {
+        position: relative;
+        width: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .pranam-link span {
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.3vw;
+        padding-right: 1vw;
+        font-family: "BalooRegular";
+      }
+
+      @keyframes pranamPop {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.12);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .pranam-link.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-color"></div>
+    <a href="pranam.html" class="pranam-link">
+      <img src="./assets/images/arowAsset.png" alt="" />
+      <span data-lang-key="pranam"></span>
+    </a>
+    <a href="index.html" class="home-btn">
+      <img src="assets/images/home-btn.png" alt="" />
+    </a>
+
+    <div class="language-container">
+      <div class="english-button lang-active">E</div>
+      <div class="hindi-button">H</div>
+      <div class="gujrati-button">G</div>
+    </div>
+
+    <div data-lang-key="title" class="title-1">Say What When</div>
+
+    <section class="slider-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card" style="background: #f37236">
+              <div class="card-image" style="">
+                <img src="./assets/images/1.png" alt="">
+                <video src="./assets/videos/1.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-1"></span>
+                <p data-lang-key="slide-1.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #ffaf43">
+              <div class="card-image" style="">
+                <img src="./assets/images/2.jpg" alt="">
+                <video src="./assets/videos/2.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-2"></span>
+                <p data-lang-key="slide-2.1"></p>
+              </div>
+            </div>
+          </div>
+          <!-- #27adad -->
+          <div class="swiper-slide">
+            <div class="card" style="background: #27adad">
+              <div class="card-image" style="">
+                                <img src="./assets/images/3.jpg" alt="">
+                <video src="./assets/videos/3.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-3"></span>
+                <p data-lang-key="slide-3.1"></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #8e9a22">
+              <div class="card-image" style="">
+                                <img src="./assets/images/4.jpg" alt="">
+
+                <video src="./assets/videos/4.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-4"></span>
+                <p data-lang-key="slide-4.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #c74040"
+            >
+                            <img src="./assets/images/5.png" alt="">
+
+              <div class="card-image" style="">
+                <video src="./assets/videos/5.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-5"></span>
+                <p data-lang-key="slide-5.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #7e43ca">
+              <div class="card-image" style="">
+                                <img src="./assets/images/6.jpg" alt="">
+
+                <video src="./assets/videos/6.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-6"></span>
+                <p data-lang-key="slide-6.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #ffaf43">
+             <div class="card-image" style="">
+                              <img src="./assets/images/7.jpg" alt="">
+
+                <video src="./assets/videos/7.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-7"></span>
+                <p data-lang-key="slide-7.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #38c65b">
+             <div class="card-image" style="">
+                              <img src="./assets/images/8.jpg" alt="">
+
+                <video src="./assets/videos/8.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-8"></span>
+                <p data-lang-key="slide-8.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #27adad">
+              <div class="card-image" style="">
+                                <img src="./assets/images/9.jpg" alt="">
+
+                <video src="./assets/videos/9.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-9"></span>
+                <p data-lang-key="slide-9.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #c74040">
+             <div class="card-image" style="">
+                              <img src="./assets/images/10.jpg" alt="">
+
+                <video src="./assets/videos/10.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-10"></span>
+                <p data-lang-key="slide-10.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #8e9a22">
+             <div class="card-image" style="">
+                              <img src="./assets/images/11.png" alt="">
+
+                <video src="./assets/videos/11.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-11"></span>
+                <p data-lang-key="slide-11.1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card" style="background: #586fca">
+             <div class="card-image" style="">
+                              <img src="./assets/images/12.png" alt="">
+
+                <video src="./assets/videos/12.mp4" muted loop playsinline></video>
+              </div>
+              <button class="slide-close-btn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-text">
+                <span data-lang-key="slide-12"></span>
+                <p data-lang-key="slide-12.1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prev-btn">
+          <i class="fa-solid fa-angle-left img-1"></i>
+          <i style="opacity: 0" class="fa-solid fa-angles-left img-2"></i>
+        </div>
+        <div class="next-btn">
+          <i class="fa-solid fa-angle-right img-1"></i>
+          <i style="opacity: 0" class="fa-solid fa-angles-right img-2"></i>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      function hexToRgba(hex, alpha) {
+        let cleanHex = hex.replace("#", "").trim();
+
+        if (cleanHex.length === 3) {
+          cleanHex = cleanHex
+            .split("")
+            .map((ch) => ch + ch)
+            .join("");
+        }
+
+        const r = parseInt(cleanHex.substring(0, 2), 16);
+        const g = parseInt(cleanHex.substring(2, 4), 16);
+        const b = parseInt(cleanHex.substring(4, 6), 16);
+
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      }
+
+      function updateBackgroundFromPrevSlide(swiper) {
+        const bg = document.querySelector(".bg-color");
+        const prevSlide = document.querySelector(
+          ".mySwiper .swiper-slide-prev .card",
+        );
+
+        if (!bg || !prevSlide) return;
+
+        const cardColor = window.getComputedStyle(prevSlide).backgroundColor;
+
+        function brightenColor(rgb, amount = 40) {
+          const values = rgb.match(/\d+/g).map(Number);
+
+          const r = Math.min(255, values[0] + amount);
+          const g = Math.min(255, values[1] + amount);
+          const b = Math.min(255, values[2] + amount);
+
+          return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        const brightColor = brightenColor(cardColor, 10);
+
+        bg.style.background = `
+      radial-gradient(
+        circle at center,
+        ${brightColor} 20%,
+        ${brightColor} 100%
+      )
+    `;
+      }
+
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        speed: 700,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: window.innerWidth * 0.03,
+        allowTouchMove: true,
+
+        navigation: {
+          nextEl: ".next-btn",
+          prevEl: ".prev-btn",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        on: {
+          init: function () {
+            updateBackgroundFromPrevSlide(this);
+          },
+
+          slideChangeTransitionStart: function () {
+            updateBackgroundFromPrevSlide(this);
+            // Whenever the slide starts changing, reset any active video back to image
+            deactivateVideo();
+          },
+
+          resize: function () {
+            this.params.spaceBetween = window.innerWidth * 0.03;
+            this.update();
+            updateBackgroundFromPrevSlide(this);
+          },
+        },
+      });
+
+      const swiperEl = document.querySelector(".mySwiper");
+      const bodyEl = document.body;
+      const nextBtn = document.querySelector(".next-btn");
+      const prevBtn = document.querySelector(".prev-btn");
+      const homeBtn = document.querySelector(".home-btn");
+      const pranamLink = document.querySelector(".pranam-link");
+
+      let isFocusMode = false;
+      let activeCard = null;
+
+      function playVideoIn(card) {
+        const video = card.querySelector(".card-image video");
+        if (video) {
+          video.currentTime = 0;
+          video.play().catch(() => {});
+        }
+      }
+
+      function pauseVideoIn(card) {
+        const video = card.querySelector(".card-image video");
+        if (video) {
+          video.pause();
+        }
+      }
+
+      function getRealSlidesCount() {
+        return document.querySelectorAll(
+          ".mySwiper .swiper-slide:not(.swiper-slide-duplicate)",
+        ).length;
+      }
+
+      function isLastRealSlideActive() {
+        return swiper.realIndex === getRealSlidesCount() - 1;
+      }
+
+      // Checks whether a given slide element is the last real slide
+      function isSlideLast(slideEl) {
+        if (!slideEl) return false;
+        const idx = parseInt(
+          slideEl.getAttribute("data-swiper-slide-index"),
+          10,
+        );
+        return idx === getRealSlidesCount() - 1;
+      }
+
+      function showPranamLink() {
+        if (pranamLink) pranamLink.classList.add("show");
+      }
+
+      function hidePranamLink() {
+        if (pranamLink) pranamLink.classList.remove("show");
+      }
+
+      // Shows the video and hides the image for the given slide's card
+      function activateVideo(clickedSlide) {
+        if (!clickedSlide) return;
+        const card = clickedSlide.querySelector(".card");
+        if (!card) return;
+
+        card.classList.add("show-video");
+        activeCard = card;
+        playVideoIn(card);
+
+        // Only reveal the pranam link when the activated slide is the last one
+        if (isSlideLast(clickedSlide)) {
+          showPranamLink();
+        }
+      }
+
+      // Hides the video and restores the image for the currently active card
+      function deactivateVideo() {
+        if (activeCard) {
+          pauseVideoIn(activeCard);
+          activeCard.classList.remove("show-video");
+          activeCard = null;
+        }
+        hidePranamLink();
+      }
+
+      function enableFocusMode(clickedSlide) {
+        swiperEl.classList.add("focus-mode");
+        bodyEl.classList.add("swiper-focus-active");
+        isFocusMode = true;
+        activateVideo(clickedSlide);
+      }
+
+      function disableFocusMode() {
+        swiperEl.classList.remove("focus-mode");
+        bodyEl.classList.remove("swiper-focus-active");
+        isFocusMode = false;
+        deactivateVideo();
+      }
+
+      function toggleFocusMode(clickedSlide) {
+        if (isFocusMode) {
+          disableFocusMode();
+        } else {
+          enableFocusMode(clickedSlide);
+        }
+      }
+
+      // ---- Sound effects: home button + swiper nav buttons + slide click ----
+      const popAudio = new Audio("./assets/audio/pop.mp3");
+      const navAudio = new Audio("./assets/audio/1.mp3");
+      const slideAudio = new Audio("./assets/audio/2.mp3");
+
+      function playPopSound() {
+        popAudio.currentTime = 0;
+        popAudio.play().catch((err) => {
+          console.warn("Home button audio playback failed:", err);
+        });
+      }
+
+      function playNavSound() {
+        navAudio.currentTime = 0;
+        navAudio.play().catch((err) => {
+          console.warn("Navigation button audio playback failed:", err);
+        });
+      }
+
+      function playSlideSound() {
+        slideAudio.currentTime = 0;
+        slideAudio.play().catch((err) => {
+          console.warn("Slide click audio playback failed:", err);
+        });
+      }
+
+      swiper.on("click", function () {
+        const clickedSlide = this.clickedSlide;
+        if (!clickedSlide) return;
+
+        playSlideSound();
+
+        if (clickedSlide.classList.contains("swiper-slide-active")) {
+          toggleFocusMode(clickedSlide);
+        } else if (isFocusMode) {
+          const clickedIndex = clickedSlide.getAttribute(
+            "data-swiper-slide-index",
+          );
+          this.slideToLoop(clickedIndex);
+        }
+      });
+
+      swiper.on("slideChangeTransitionEnd", function () {
+        if (isFocusMode) {
+          swiperEl.classList.add("focus-mode");
+          bodyEl.classList.add("swiper-focus-active");
+
+          // Re-activate video + close-btn (and pranam-link if applicable)
+          // for whichever slide is now active, since deactivateVideo()
+          // was called on transition start.
+          const activeSlide = document.querySelector(
+            ".mySwiper .swiper-slide-active",
+          );
+          activateVideo(activeSlide);
+        }
+      });
+
+      // Close button click handler for every slide (event delegation)
+      swiperEl.addEventListener("click", function (e) {
+        const closeBtn = e.target.closest(".slide-close-btn");
+        if (!closeBtn) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        disableFocusMode();
+      });
+
+      // NOTE: next-btn now behaves like normal Swiper navigation at all times,
+      // including on the last slide — it simply advances (loops) to the next
+      // slide instead of redirecting to pranam.html.
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", playNavSound);
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", playNavSound);
+      }
+
+      // Home button: intercept navigation so the pop sound has time to play
+      if (homeBtn) {
+        homeBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          const destination = homeBtn.getAttribute("href");
+
+          playPopSound();
+
+          setTimeout(() => {
+            window.location.href = destination;
+          }, 1000);
+        });
+      }
+    </script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
