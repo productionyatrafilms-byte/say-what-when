@@ -461,7 +461,7 @@ body[data-lang="gu"] .title {
     align-items: center;
     font-size: 2.8vw;
     font-weight: 600;
-    /* padding: 5vw; */
+    text-shadow: -0.1vw 0 0.1vw black;
   }
 
   .card-text p {
