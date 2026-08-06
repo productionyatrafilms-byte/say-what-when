@@ -186,14 +186,16 @@ body[data-lang="gu"] {
   color: #FF8605;
   font-weight: 700;
   font-family: "AbrilFatface";
-  background:white;
+  background: white;
   box-shadow:
     -0.4vw 0.4vw 0.1vw rgba(0, 0, 0, 0.40),
     inset 0 0.1vw 0.2vw rgba(255, 255, 255, 0.25);
   border: transparent;
   opacity: 0;
   transition: transform 0.5s ease-in;
-  animation: titleEntrance 1400ms cubic-bezier(.22, 1, .36, 1) 200ms forwards;
+  animation:
+    titleEntrance 1400ms cubic-bezier(.22, 1, .36, 1) 200ms forwards,
+    titlePop 1s ease-in-out 1600ms infinite;
 }
 
 .title:hover{
@@ -208,18 +210,27 @@ body[data-lang="gu"] {
   }
 
   40% {
-    transform: translate(-50%, -50%) scale(1.05);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
 
    70% {
-    transform: translate(-50%, -50%) scale(0.95);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
 
   100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes titlePop {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
   }
 }
 
@@ -275,11 +286,11 @@ body[data-lang="gu"] .title {
 
   .slider-section {
     position: absolute;
-    top: 60%;
+    top: 65%;
     transform: translateY(-50%);
     width: 100vw;
     height: 45vw !important;
-    overflow-x: hidden;
+    overflow: hidden;
     padding: 0;
     box-sizing: border-box;
     display: flex;
@@ -298,8 +309,8 @@ body[data-lang="gu"] .title {
   }
 
   .swiper-slide {
-    width: 38vw !important;
-    height: 19vw !important;
+    width: 42vw !important;
+    height: 21vw !important;
     /* height: 18vw!important; */
     display: flex;
     justify-content: center;
@@ -362,7 +373,7 @@ body[data-lang="gu"] .title {
 
   /* focus mode */
   .mySwiper.focus-mode .swiper-slide-active {
-    transform: scale(1.3) translateY(-4vw) !important;
+    transform: scaleX(1.35) scaleY(1.3) translateY(-4vw) !important;
     z-index: 20;
   }
 
@@ -380,7 +391,7 @@ body[data-lang="gu"] .title {
 
 
   .swiper-pagination {
-    bottom: 5vw !important;
+    bottom: 10vw !important;
     text-align: center;
     width: auto;
   }
@@ -403,7 +414,7 @@ body[data-lang="gu"] .title {
   .prev-btn,
   .next-btn {
     position: absolute;
-    top: 80%;
+    top: 68%;
     transform: translateY(-50%);
     width: 3vw;
     height: 3vw;
