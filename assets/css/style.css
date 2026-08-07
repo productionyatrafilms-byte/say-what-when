@@ -567,8 +567,8 @@ body[data-lang="gu"] .title {
   }
   .pranam-video{
     position: absolute;
-    left: 51%;
-    top: 49%;
+    left: 50%;
+    top: 48.5%;
     transform: translate(-50%,-50%);
     width: 28vw;
     height: 28vw;
@@ -590,6 +590,7 @@ background-color: white;
     font-size: 3.4vw;
     transform: translateX(-50%);
     font-family: "BalooRegular";
+    color: #821b00;
   }
 
 .pranam-link {
