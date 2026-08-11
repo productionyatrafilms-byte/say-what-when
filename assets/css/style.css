@@ -512,6 +512,7 @@ body[data-lang="gu"] .title {
     line-height: 2vw !important;
     font-family: "BalooRegular" !important;
     display: none;
+     white-space: pre-line;
   }
 
   body.lang-gujarati .card-text p {
