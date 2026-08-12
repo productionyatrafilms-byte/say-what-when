@@ -513,7 +513,7 @@ body[data-lang="gu"] .title {
     line-height: 2vw !important;
     font-family: "BalooRegular" !important;
     display: none;
-     white-space: pre-line;
+     white-space: pre-line!important;
   }
 
   body.lang-gujarati .card-text p {
@@ -670,7 +670,7 @@ body[data-lang="gu"] .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 2vw;
+  right: 5vw!important;
   bottom: 2vw;
   width: 9vw;
   height: auto;
