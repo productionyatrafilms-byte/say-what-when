@@ -46,16 +46,7 @@ window.addEventListener("resize", checkScreenSize);
 
   async function loadTranslations() {
     if (translations) return translations;
-
-    try {
-      const res = await fetch("assets/json/data.json", { cache: "no-store" });
-      if (!res.ok) throw new Error("JSON not found");
-      translations = await res.json();
-    } catch (err) {
-      console.warn("Translation load failed:", err);
-      translations = {};
-    }
-
+    translations = window.TRANSLATIONS_DATA || {};
     return translations;
   }
 

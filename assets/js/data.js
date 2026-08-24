@@ -1,4 +1,4 @@
-{
+window.TRANSLATIONS_DATA = {
   "English": {
     "title": "Say What When",
     "slide-1": "Namo Jinanam",
@@ -119,4 +119,4 @@
     "pranam": "પ્રણામ",
     "home": "હોમ"
   }
-}
+};
