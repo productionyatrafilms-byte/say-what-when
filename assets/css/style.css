@@ -81,6 +81,28 @@ body[data-lang="gu"] {
     background-attachment: fixed;
   }
 
+  .mascot {
+    position: fixed;
+   bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 89vh;
+    width: auto;
+    z-index: 0;
+    pointer-events: none;
+    animation: bgImageEntrance 1200ms cubic-bezier(.22, 1, .36, 1) forwards;
+  }
+
+  @keyframes bgImageEntrance {
+    0% {
+      transform: translateX(-50%) translateY(100vh);
+    }
+
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
   .home-btn {
     position: fixed;
     top: 5%;
@@ -194,8 +216,8 @@ body[data-lang="gu"] {
   opacity: 0;
   transition: transform 0.5s ease-in;
   animation:
-    titleEntrance 1400ms cubic-bezier(.22, 1, .36, 1) 200ms forwards,
-    titlePop 1s ease-in-out 1600ms infinite;
+    titleEntrance 2400ms cubic-bezier(.22, 1, .36, 1) 200ms forwards,
+    titlePop 1s ease-in-out 2600ms infinite;
 }
 
 .title:hover{
@@ -205,7 +227,7 @@ body[data-lang="gu"] {
 
 @keyframes titleEntrance {
   0% {
-    transform: translate(-50%, 220%) scale(0.90);
+    transform: translate(-50%, calc(-50% - 100vh)) scale(0.90);
     opacity: 0;
   }
 
