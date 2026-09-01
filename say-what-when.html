@@ -59,7 +59,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        right: 2vw;
+        right: -1vw;
         bottom: 2vw;
         width: 9vw;
         height: auto;
@@ -407,6 +407,10 @@
             deactivateVideo();
           },
 
+          slideChangeTransitionEnd: function () {
+            updateLastSlideState();
+          },
+
           resize: function () {
             this.params.spaceBetween = window.innerWidth * 0.03;
             this.update();
@@ -477,11 +481,6 @@
         card.classList.add("show-video");
         activeCard = card;
         playVideoIn(card);
-
-        // Only reveal the pranam link when the activated slide is the last one
-        if (isSlideLast(clickedSlide)) {
-          showPranamLink();
-        }
       }
 
       // Pauses the video for the currently active card
@@ -491,7 +490,23 @@
           activeCard.classList.remove("show-video");
           activeCard = null;
         }
-        hidePranamLink();
+      }
+
+      // Disables the next button and reveals the pranam link once the
+      // last real slide is reached; re-enables/hides them otherwise.
+      function updateLastSlideState() {
+        const isLast = isLastRealSlideActive();
+
+        if (isLast) {
+          showPranamLink();
+        } else {
+          hidePranamLink();
+        }
+
+        if (nextBtn) {
+          nextBtn.style.opacity = isLast ? "0" : "1";
+          nextBtn.style.pointerEvents = isLast ? "none" : "auto";
+        }
       }
 
       function enableFocusMode(clickedSlide) {
