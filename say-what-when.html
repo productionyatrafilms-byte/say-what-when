@@ -9,10 +9,8 @@
       rel="stylesheet"
       href="./assets/css/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="./fontawesome/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/solid.min.css" />
     <style>
       /* Videos are now always visible (no more image/video swap) */
       .card-image video {
@@ -113,65 +111,232 @@
     </style>
   </head>
   <body>
-    <div class="bg-color"></div>
+    <div
+      class="bg-color"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        overflow-x: hidden;
+        background: #f37236;
+      "
+    ></div>
     <a href="pranam.html" class="pranam-link">
       <img src="./assets/images/arowAsset.png" alt="" />
       <span data-lang-key="pranam"></span>
     </a>
-    <a href="index.html" class="home-btn">
-      <img src="assets/images/home-btn.png" alt="" />
+    <a
+      href="index.html"
+      class="home-btn"
+      style="position: fixed; top: 5%; left: 4%; width: 3.5vw; z-index: 2"
+    >
+      <img src="assets/images/home-btn.png" alt="" style="width: 100%" />
     </a>
 
-    <div class="language-container">
-      <div class="english-button lang-active">E</div>
-      <div class="hindi-button">H</div>
-      <div class="gujrati-button">G</div>
+    <div
+      class="language-container"
+      style="
+        position: fixed;
+        top: 2.8vw;
+        right: 4vw;
+        display: flex;
+        width: 8.4vw;
+        padding: 0.2vw;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        border: 0.2vw solid white;
+        border-radius: 50vw;
+      "
+    >
+      <div
+        class="english-button lang-active"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        E
+      </div>
+      <div
+        class="hindi-button"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        H
+      </div>
+      <div
+        class="gujrati-button"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        G
+      </div>
     </div>
 
-    <div data-lang-key="title" class="title-1">Say What When</div>
+    <div
+      data-lang-key="title"
+      class="title-1"
+      style="
+        position: absolute;
+        top: 5vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+        text-align: center;
+        width: 40%;
+        height: auto;
+        padding: 0.5vw 0vw;
+        border-radius: 50vw;
+        color: white;
+        font-weight: 700;
+      "
+    >
+      Say What When
+    </div>
 
-    <section class="slider-section">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card" style="background: #f37236">
-              <div class="card-image" style="">
+    <section
+      class="slider-section"
+      style="
+        position: absolute;
+        top: 65%;
+        transform: translateY(-50%);
+        width: 100vw;
+        height: 45vw;
+        overflow: hidden;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div class="swiper mySwiper" style="width: 100vw; height: 100%">
+        <div class="swiper-wrapper" style="align-items: center">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #f37236; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+              <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/1.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-1"></span>
                 <p data-lang-key="slide-1.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #ffaf43">
-              <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #ffaf43; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+              <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/2.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-2"></span>
                 <p data-lang-key="slide-2.1"></p>
               </div>
             </div>
           </div>
           <!-- #27adad -->
-          <div class="swiper-slide">
-            <div class="card" style="background: #27adad">
-              <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #27adad; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+              <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/3.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-3"></span>
                 <p data-lang-key="slide-3.1"></p>
               </div>
@@ -179,135 +344,324 @@
           </div>
 
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #8e9a22">
-              <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #8e9a22; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+              <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/4.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-4"></span>
                 <p data-lang-key="slide-4.1"></p>
               </div>
             </div>
           </div>
 
-         <div class="swiper-slide">
-            <div class="card" style="background: #c74040">
-              <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #c74040; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+              <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/5.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-5"></span>
                 <p data-lang-key="slide-5.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #7e43ca">
-              <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #7e43ca; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+              <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/6.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-6"></span>
                 <p data-lang-key="slide-6.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #ffaf43">
-             <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #ffaf43; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+             <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/7.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-7"></span>
                 <p data-lang-key="slide-7.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #38c65b">
-             <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #38c65b; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+             <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/8.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-8"></span>
                 <p data-lang-key="slide-8.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #27adad">
-              <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #27adad; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+              <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/9.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-9"></span>
                 <p data-lang-key="slide-9.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #c74040">
-             <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #c74040; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+             <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video  src="./assets/videos/10.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-10"></span>
                 <p data-lang-key="slide-10.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #8e9a22">
-             <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #8e9a22; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+             <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/11.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-11"></span>
                 <p data-lang-key="slide-11.1"></p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-slide">
-            <div class="card" style="background: #586fca">
-             <div class="card-image" style="">
+          <div
+            class="swiper-slide"
+            style="
+              width: 43vw;
+              height: 21vw;
+              display: flex;
+              justify-content: center;
+              align-items: stretch;
+            "
+          >
+            <div class="card" style="background: #586fca; width: 100%; height: 100%; border: 0.35vw solid white; border-radius: 1vw; display: flex">
+             <div class="card-image" style="width: 55%; padding: 0.3vw">
                 <video src="./assets/videos/12.mp4" muted loop playsinline></video>
               </div>
               <button class="slide-close-btn" type="button" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <div class="card-text">
+              <div
+                class="card-text"
+                style="
+                  width: 45%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.5vw;
+                "
+              >
                 <span data-lang-key="slide-12"></span>
                 <p data-lang-key="slide-12.1"></p>
               </div>

@@ -4,32 +4,177 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-lang-key="pranam"></title>
-        <link
-      rel="stylesheet"
-      href="./fontawesome/css/all.min.css"
-    />
+        <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/solid.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body style="background-color: #f1a832; height:100%; width:100% ">
-    <a href="say-what-when.html" class="back-btn">
+    <a
+      href="say-what-when.html"
+      class="back-btn"
+      style="
+        position: fixed;
+        top: 5%;
+        left: 4%;
+        width: 3vw;
+        height: 3vw;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 50%;
+        border: 0.2vw solid white;
+      "
+    >
       <i class="fa-solid fa-arrow-left"></i>
     </a>
-    <div class="language-container">
-      <div class="english-button lang-active">E</div>
-      <div class="hindi-button">H</div>
-      <div class="gujrati-button">G</div>
-    </div>
-    <div class="pranam-container">
-      <div class="pranam-img">
-        <div class="pranam-video">
-          <video src="./assets/videos/pranam.mp4" autoplay muted></video>
-        </div>
-        <span data-lang-key="pranam"></span>
-        <img src="./assets/images/pranam-img.png" alt="" />
+    <div
+      class="language-container"
+      style="
+        position: fixed;
+        top: 2.8vw;
+        right: 4vw;
+        display: flex;
+        width: 8.4vw;
+        padding: 0.2vw;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        border: 0.2vw solid white;
+        border-radius: 50vw;
+      "
+    >
+      <div
+        class="english-button lang-active"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        E
       </div>
-      <a href="index.html" class="home-btn-1">
-        <span data-lang-key="home"></span>
-        <img src="./assets/images/home-btn-1.png" alt="" />
+      <div
+        class="hindi-button"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        H
+      </div>
+      <div
+        class="gujrati-button"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        G
+      </div>
+    </div>
+    <div
+      class="pranam-container"
+      style="
+        position: absolute;
+        width: 45vw;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        class="pranam-img"
+        style="position: relative; width: 85%; height: auto; display: block"
+      >
+        <div
+          class="pranam-video"
+          style="
+            position: absolute;
+            left: 50%;
+            top: 48.5%;
+            background-image: url('assets/images/pranam-bg-1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: translate(-50%, -50%);
+            width: 25.5vw;
+            height: 28vw;
+            border-radius: 50%;
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding-right: 2.5vw;
+          "
+        >
+          <video
+            src="./assets/videos/pranam.mp4"
+            autoplay
+            muted
+            style="width: 90%; height: 83%; object-fit: cover"
+          ></video>
+        </div>
+        <span
+          data-lang-key="pranam"
+          style="
+            z-index: 15;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            font-size: 3.4vw;
+            transform: translateX(-50%);
+            color: #821b00;
+          "
+        ></span>
+        <img
+          src="./assets/images/pranam-img.png"
+          alt=""
+          style="width: 100%; display: block"
+        />
+      </div>
+      <a
+        href="index.html"
+        class="home-btn-1"
+        style="position: absolute; top: 88%; left: 35%; width: 15vw; height: auto"
+      >
+        <span
+          data-lang-key="home"
+          style="
+            z-index: 15;
+            position: absolute;
+            top: 45%;
+            left: 38%;
+            font-size: 2.5vw;
+            transform: translateY(-50%);
+            color: #821b00;
+          "
+        ></span>
+        <img
+          src="./assets/images/home-btn-1.png"
+          alt=""
+          style="width: 100%; display: block"
+        />
       </a>
     </div>
 

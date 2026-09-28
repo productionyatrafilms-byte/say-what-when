@@ -8,7 +8,7 @@
 
   @font-face {
     font-family: "AbrilFatface";
-    src: url("./fonts/AbrilFatface-Regular.ttf") format("truetype");
+    src: url("../../fonts/AbrilFatface-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
   @font-face {
     font-family: "LobsterTwoRegular";
-    src: url("./fonts/LobsterTwo-Regular.ttf") format("truetype");
+    src: url("../../fonts/LobsterTwo-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
   @font-face {
     font-family: "NotoSansGujaratiRegular";
-    src: url("./fonts/NotoSansGujarati-Regular.ttf") format("truetype");
+    src: url("../../fonts/NotoSansGujarati-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -158,8 +158,8 @@ body[data-lang="gu"] {
 
   .language-container {
     position: fixed;
-    top: 5%;
-    right: 4%;
+    top: 2.8vw;
+    right: 4vw;
     display: flex;
     width: 8.4vw;
     padding: 0.2vw;

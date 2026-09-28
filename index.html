@@ -10,20 +10,116 @@
   
   </head>
   <body>
-    <div class="bg-image"></div>
-    <img class="mascot" src="assets/images/mascot.png" alt="" />
+    <div
+      class="bg-image"
+      style="
+        background-image: url('assets/images/bg-image.png');
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      "
+    ></div>
+    <img
+      class="mascot"
+      src="assets/images/mascot.png"
+      alt=""
+      style="
+        position: fixed;
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 89vh;
+        width: auto;
+        z-index: 0;
+        pointer-events: none;
+      "
+    />
 
     <!-- nav-container -->
-    <div class="language-container">
-      <div class="english-button lang-active">E</div>
-      <div class="hindi-button">H</div>
-      <div class="gujrati-button">G</div>
+    <div
+      class="language-container"
+      style="
+        position: fixed;
+        top: 2.8vw;
+        right: 4vw;
+        display: flex;
+        width: 8.4vw;
+        padding: 0.2vw;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        border: 0.2vw solid white;
+        border-radius: 50vw;
+      "
+    >
+      <div
+        class="english-button lang-active"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        E
+      </div>
+      <div
+        class="hindi-button"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        H
+      </div>
+      <div
+        class="gujrati-button"
+        style="
+          width: 2.2vw;
+          height: 2.2vw;
+          font-size: 1.7vw;
+          text-align: center;
+          border: 0.2vw solid #ffffff;
+          cursor: pointer;
+          border-radius: 50%;
+        "
+      >
+        G
+      </div>
     </div>
     <!-- <a href="say-whan-when.html"> -->
     <button
       data-lang-key="title"
       class="title"
       onclick="playTitleSoundAndNavigate('say-what-when.html')"
+      style="
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8vw;
+        width: 74%;
+        height: auto;
+        padding: 2vw 0vw;
+        border-radius: 2vw;
+        color: #ff8605;
+        font-weight: 700;
+        background: white;
+        border: none;
+        appearance: none;
+        font-family: inherit;
+        cursor: pointer;
+      "
     >
       Say What When
     </button>
@@ -45,6 +141,6 @@
     </script>
     <script src="assets/js/data.js"></script>
     <script src="assets/js/app.js"></script>
-    <!-- <script src="assets/js/djp.js"></script> -->
+    <script src="assets/js/djp.js"></script>
   </body>
 </html>
