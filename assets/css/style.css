@@ -1,6 +1,6 @@
   @font-face {
     font-family: "BalooRegular";
-    src: url("../../fonts/Baloo Regular 400.ttf") format("truetype");
+    src: url("../../fonts/Baloo-Regular-400.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -547,12 +547,18 @@ body[data-lang="gu"] .title {
   .mySwiper.focus-mode .swiper-slide-active .card-text p {
     display: block;
     animation: textFromTop 0.8s ease;
+    /* tighter type in focus mode so long text fits inside the card */
+    font-size: 1.05vw !important;
+    line-height: 1.45vw !important;
+    padding: 0.3vw !important;
   }
 
 
   .mySwiper.focus-mode .swiper-slide-active .card-text span {
     padding: 0;
     animation: textFromTop 0.8s ease;
+    font-size: 2.3vw;
+    line-height: 1.15;
   }
 
   @keyframes textFromTop {
