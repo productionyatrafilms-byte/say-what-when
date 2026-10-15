@@ -217,6 +217,8 @@
       Say What When
     </div>
 
+    <div class="focus-overlay"></div>
+
     <section
       class="slider-section"
       style="
@@ -737,7 +739,7 @@
         speed: 700,
         centeredSlides: true,
         slidesPerView: "auto",
-        spaceBetween: window.innerWidth * 0.03,
+        spaceBetween: window.innerWidth * 0.07,
         allowTouchMove: true,
 
         navigation: {
@@ -766,7 +768,7 @@
           },
 
           resize: function () {
-            this.params.spaceBetween = window.innerWidth * 0.03;
+            this.params.spaceBetween = window.innerWidth * 0.07;
             this.update();
             updateBackgroundFromPrevSlide(this);
           },
@@ -976,6 +978,11 @@
 
         disableFocusMode();
       });
+
+      // Clicking the dim overlay closes the focused card
+      document
+        .querySelector(".focus-overlay")
+        .addEventListener("click", disableFocusMode);
 
       // NOTE: next-btn now behaves like normal Swiper navigation at all times,
       // including on the last slide — it simply advances (loops) to the next

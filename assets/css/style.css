@@ -276,9 +276,9 @@ body[data-lang="gu"] .title {
     top: 5vw;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 5vw;
+    font-size: 4vw !important;
     text-align: center;
-    width: 40%;
+    width: 34% !important;
     height: auto;
     word-break: keep-all;
     padding: 0.5vw 0vw;
@@ -311,7 +311,7 @@ body[data-lang="gu"] .title {
     top: 65%;
     transform: translateY(-50%);
     width: 100vw;
-    height: 45vw !important;
+    height: 36vw !important;
     overflow: hidden;
     padding: 0;
     box-sizing: border-box;
@@ -324,6 +324,19 @@ body[data-lang="gu"] .title {
   .mySwiper {
     width: 100vw;
     height: 100%;
+    overflow: visible !important;
+  }
+
+  /* let the raised/enlarged active card extend past the slider box instead of clipping */
+  .slider-section {
+    overflow: visible !important;
+    /* the title is sized in vw, so never let the slider ride up under it in short windows */
+    top: max(65%, 35vw) !important;
+  }
+
+  /* slider page fits the window, so no page scrollbar */
+  body:has(.slider-section) {
+    overflow-y: hidden;
   }
 
   .swiper-wrapper {
@@ -355,16 +368,18 @@ body[data-lang="gu"] .title {
   }
 
   .card-image {
-    width: 55%;
-    padding: 0.3vw;
+    width: 55% !important;
+    padding: 0 !important;
     object-fit: cover;
+    overflow: hidden;
+    border-radius: 0.65vw 0 0 0.65vw;
   }
 
   .card-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0.4vw;
+    border-radius: 0;
   }
 
   .card-image img{
@@ -380,7 +395,7 @@ body[data-lang="gu"] .title {
   }
 
   .swiper-slide-active {
-    transform: translateY(-8vw) rotate(0deg) scale(1) !important;
+    transform: translateY(-12vw) rotate(0deg) scale(1.22) !important;
     z-index: 3;
   }
 
@@ -396,8 +411,35 @@ body[data-lang="gu"] .title {
 
   /* focus mode */
   .mySwiper.focus-mode .swiper-slide-active {
-    transform: scaleX(1.35) scaleY(1.3) translateY(-4vw) !important;
+    /* shift from the slider's centre (max(65vh, 35vw)) to the viewport centre */
+    transform: translateY(calc(50vh - max(65vh, 35vw))) scale(1.6) !important;
     z-index: 20;
+  }
+
+  body.swiper-focus-active .swiper-pagination {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* full-screen dim overlay shown behind the focused card */
+  .focus-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 4;
+  }
+
+  body.swiper-focus-active .focus-overlay {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  body.swiper-focus-active .slider-section {
+    z-index: 5;
   }
 
   .mySwiper.focus-mode .swiper-slide-prev,
@@ -414,7 +456,7 @@ body[data-lang="gu"] .title {
 
 
   .swiper-pagination {
-    bottom: 10vw !important;
+    bottom: 8vw !important;
     text-align: center;
     width: auto;
   }
@@ -437,7 +479,7 @@ body[data-lang="gu"] .title {
   .prev-btn,
   .next-btn {
     position: absolute;
-    top: 68%;
+    top: 62%;
     transform: translateY(-50%);
     width: 3vw;
     height: 3vw;
@@ -491,17 +533,17 @@ body[data-lang="gu"] .title {
 
   .swiper-focus-active .prev-btn,
   .swiper-focus-active .next-btn {
-    top: 40%;
+    top: calc(50vh - max(65vh, 35vw) + 18vw);
     transform:translateY(-50%)
   }
 
   /* reduce left-right gap of buttons in focus mode */
   .swiper-focus-active .prev-btn {
-    left: 15vw;
+    left: 6vw;
   }
 
   .swiper-focus-active .next-btn {
-    right: 15vw;
+    right: 6vw;
   }
 
   .card-text {
