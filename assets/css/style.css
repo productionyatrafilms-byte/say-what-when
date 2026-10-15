@@ -324,12 +324,15 @@ body[data-lang="gu"] .title {
   .mySwiper {
     width: 100vw;
     height: 100%;
-    overflow: visible !important;
+    overflow-x: clip !important;
+    overflow-y: visible !important;
   }
 
-  /* let the raised/enlarged active card extend past the slider box instead of clipping */
+  /* let the raised/enlarged active card extend above/below the slider box, but never sideways
+     (sideways overflow widens the page on phones and shows as white space) */
   .slider-section {
-    overflow: visible !important;
+    overflow-x: clip !important;
+    overflow-y: visible !important;
     /* the title is sized in vw, so never let the slider ride up under it in short windows */
     top: max(65%, 35vw) !important;
   }
